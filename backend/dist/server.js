@@ -43,7 +43,7 @@ app.get("/users/:id", (req, res) => {
 app.post("/users", (req, res) => {
     const { firstName, lastName, email, phoneNumber } = req.body;
     if (!firstName || !lastName || !email || !phoneNumber) {
-        return res.status(400).json({ message: "You must name all fields: firstName, lastName, email, phoneNumber" });
+        return res.status(400).json({ message: "You must give all fields: firstName, lastName, email, phoneNumber" });
     }
     const newUser = {
         _id: `${combinedUsers.length + 1}`,
